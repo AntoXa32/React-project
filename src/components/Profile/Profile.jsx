@@ -8,10 +8,10 @@ export default function Profile({
   stats: { followers, views, likes },
 }) {
   return (
-    <div className={css.profile}>
-      <div className={css.avatars}>
-        <img className={css.img} src={image} alt="User avatar" />
-        <p className={css.name}>{name}</p>
+    <div className={css.container}>
+      <div className={css.profile}>
+        <img className={css.images} src={image} alt="User avatar" />
+        <p className={css.username}>{name}</p>
         <p className={css.tag}>@{tag}</p>
         <p className={css.location}>{location}</p>
       </div>
@@ -19,15 +19,15 @@ export default function Profile({
       <ul className={css.list}>
         <li className={css.item}>
           <span>Followers</span>
-          <span>{followers}</span>
+          <span className={css.items}>{followers}</span>
         </li>
         <li className={css.item}>
           <span>Views</span>
-          <span>{views}</span>
+          <span className={css.items}>{views}</span>
         </li>
         <li className={css.item}>
           <span>Likes</span>
-          <span>{likes}</span>
+          <span className={css.items}>{likes}</span>
         </li>
       </ul>
     </div>

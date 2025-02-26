@@ -1,36 +1,66 @@
-.profile {
-    width: 300px;
-    margin: 0 auto;
-    border: 3px solid;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-.avatars {
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
+    width: 300px;
+    border: 2px solid rgb(9, 9, 9);
+    border-radius: 10px;
+    margin: 0 auto;
+    z-index: 1;
+    margin-top: 20px;
 }
 
-.img {
-    width: 100px;
-    background-color: black;
-    border-radius: 50%;
-    margin-bottom: 20px;
+.profile {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
+.images {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(34, 32, 32);
+    border-radius: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.username {
+    font-weight: bold;
+    padding: 15px;
+    font-size: 25px;
+}
+
+.tag {
+    color: gray;
+    padding-bottom: 5px;
+}
+
+.location {
+    color: gray;
+    padding-bottom: 15px;
+}
 
 .list {
     display: flex;
-
+    width: 100%;
+    border-top: 2px solid rgb(115, 113, 113);
 }
 
 .item {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    align-items: center;
-    background-color: rgb(185, 180, 180);
-    border: 1px solid;
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgb(208, 205, 205);
+    z-index: -1;
+}
+
+.item:not(:last-child) {
+    border-right: 1px solid rgb(115, 113, 113);
+}
+
+.items {
+    font-weight: bold;
 }

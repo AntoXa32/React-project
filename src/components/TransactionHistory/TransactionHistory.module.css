@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.centeredTable {
+    border-collapse: collapse;
+    width: 60%;
+}
+
+.table {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.tables {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+}
+
+.background:nth-child(even) {
+    background-color: #c4c1c1;
+}
+
+.background:nth-child(odd) {
+    background-color: #fff;
+}
+
+.background:hover {
+    background-color: #b70a0a71;
+}
