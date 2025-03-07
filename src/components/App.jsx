@@ -56,6 +56,14 @@ export default function App() {
 
   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
 
+  const resetFeedback = () => {
+    setFeedback({ good: 0, neutral: 0, bad: 0 });
+  };
+
+  const positivePercentage = totalFeedback
+    ? Math.round(((feedback.good + feedback.neutral) / totalFeedback) * 100)
+    : 0;
+
   return (
     <>
       <Profile
@@ -99,9 +107,17 @@ export default function App() {
           Please leave your feedback about our service by selecting one of the
           options below.
         </p>
-        <Options updateFeedback={updateFeedback}></Options>
+        <Options
+          updateFeedback={updateFeedback}
+          resetFeedback={resetFeedback}
+          totalFeedback={totalFeedback}
+        ></Options>
         {totalFeedback > 0 ? (
-          <Feedback feedback={feedback} />
+          <Feedback
+            feedback={feedback}
+            totalFeedback={totalFeedback}
+            positivePercentage={positivePercentage}
+          />
         ) : (
           <Notification />
         )}

@@ -1,4 +1,8 @@
-export default function Options({ updateFeedback }) {
+export default function Options({
+  updateFeedback,
+  resetFeedback,
+  totalFeedback,
+}) {
   return (
     <>
       <button
@@ -22,6 +26,15 @@ export default function Options({ updateFeedback }) {
       >
         Bad
       </button>
+      {totalFeedback > 0 && (
+        <button
+          onClick={() => {
+            resetFeedback();
+          }}
+        >
+          Reset
+        </button>
+      )}
     </>
   );
 }
